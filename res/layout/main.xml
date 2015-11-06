@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        </TabWidget>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/tab1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <ScrollView
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/etP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="@string/chislo_p"
+                android:inputType="number"
+                android:layout_weight="1" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/etQ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="Число q"
+                android:inputType="number" 
+                android:layout_weight="1"
+                >
+
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/check1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Перевірити на простоту" />
+
+        <Button
+            android:id="@+id/calc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Розрахунок n та фунуції Ейлера" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="n="
+                android:textAppearance="?android:attr/textAppearanceLarge" 
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tFi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fi(n)="
+                android:textAppearance="?android:attr/textAppearanceLarge" 
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/etE1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:inputType="number" 
+                android:hint="Число e"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/check2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Перевірити на простоту" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Розрахунок секретного ключа" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="d="
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Показати ключ" 
+                android:layout_weight="1"
+                android:onClick="onClick"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" 
+                android:enabled="false">
+                <EditText
+                    android:id="@+id/etVidkr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" 
+                    android:hint="Відкритий текст"/>
+                <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/etE2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="Число e"
+                android:inputType="number"
+                android:layout_weight="1"
+                 >
+            </EditText>
+            <EditText
+                android:id="@+id/etN"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="Число n"
+                android:inputType="number" 
+                android:layout_weight="1">
+
+            </EditText>
+        </LinearLayout>
+          <Button
+                android:id="@+id/btnDecrypt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Зашифрувати" />
+                  <TextView
+                android:id="@+id/tZakr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Шифротекст:"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" 
+                android:orientation="vertical"
+                android:enabled="false">
+                  <EditText
+                    android:id="@+id/etZakr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" 
+                    android:hint="Шифротекст"/>
+                   <Button
+                android:id="@+id/btnEncrypt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Розшифрувати" />
+                  <TextView
+                android:id="@+id/tVidkr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Відкритий текст:"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</TabHost>
